@@ -1,12 +1,14 @@
 package com.maat.mediaservice.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.web.multipart.MultipartFile;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-//TODO: Maybe this is not required, can be deleted!!!
-
+@Data
+@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MediaUploadRequest {
+public class MediaUploadResponse {
     private String fileName;
     private String fileLocation;
+    private String fileType;
 }
